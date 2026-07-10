@@ -31,5 +31,6 @@ func _physics_process(delta: float) -> void:
 
 func game_over():
 	is_game_over = true
+	animator.play("game_over")
 	await get_tree().create_timer(3).timeout
 	get_tree().reload_current_scene()
