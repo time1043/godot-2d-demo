@@ -2,10 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://b1vo1b367ywj0" path="res://AssetBundle/Sprites/ForestBackground.png" id="1_iukft"]
 [ext_resource type="PackedScene" uid="uid://dbgfhmha368r7" path="res://Scenes/Player.tscn" id="2_gl6un"]
+[ext_resource type="PackedScene" uid="uid://dar33tpddlyaf" path="res://Scenes/Slime.tscn" id="3_j5yw3"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ojjrd"]
 
 [node name="Node2D" type="Node2D" unique_id=966623037]
+y_sort_enabled = true
 
 [node name="Background 1" type="Sprite2D" parent="." unique_id=1934012460]
 position = Vector2(-120, 0)
@@ -54,3 +56,6 @@ rotation = 3.1415925
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boundary/StaticBody2D4" unique_id=1091958050]
 position = Vector2(0, 131)
 shape = SubResource("WorldBoundaryShape2D_ojjrd")
+
+[node name="Area2D" parent="." unique_id=1411609512 instance=ExtResource("3_j5yw3")]
+position = Vector2(191, 74)

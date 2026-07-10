@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://dar33tpddlyaf"]
+
+[ext_resource type="Texture2D" uid="uid://dewplhtlskt00" path="res://AssetBundle/Sprites/Slimer.png" id="1_f0k3c"]
+[ext_resource type="Script" uid="uid://b2o5bw55l3t5x" path="res://Scripts/enemy.gd" id="1_p1xxi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p1xxi"]
+atlas = ExtResource("1_f0k3c")
+region = Rect2(0, 0, 41, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7yyg5"]
+atlas = ExtResource("1_f0k3c")
+region = Rect2(41, 0, 41, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xsyo3"]
+atlas = ExtResource("1_f0k3c")
+region = Rect2(82, 0, 41, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oi5nh"]
+atlas = ExtResource("1_f0k3c")
+region = Rect2(123, 0, 41, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmdr4"]
+atlas = ExtResource("1_f0k3c")
+region = Rect2(164, 0, 41, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3mnvw"]
+atlas = ExtResource("1_f0k3c")
+region = Rect2(205, 0, 41, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h65gf"]
+atlas = ExtResource("1_f0k3c")
+region = Rect2(246, 0, 41, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ri7b6"]
+atlas = ExtResource("1_f0k3c")
+region = Rect2(287, 0, 41, 38)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ojjrd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p1xxi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7yyg5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xsyo3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oi5nh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qmdr4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3mnvw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h65gf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ri7b6")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ojjrd"]
+radius = 12.0
+
+[node name="Slime" type="Area2D" unique_id=1411609512]
+script = ExtResource("1_p1xxi")
+slime_speed = -50.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=838509306]
+sprite_frames = SubResource("SpriteFrames_ojjrd")
+autoplay = "default"
+frame_progress = 0.85192895
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=720752541]
+position = Vector2(0, 10)
+shape = SubResource("CircleShape2D_ojjrd")
