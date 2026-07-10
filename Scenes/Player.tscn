@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dbgfhmha368r7"]
 
+[ext_resource type="Script" uid="uid://bibqjbuhnkjeq" path="res://Scripts/player.gd" id="1_kyqiw"]
 [ext_resource type="Texture2D" uid="uid://cm7ktot78ttm2" path="res://AssetBundle/Sprites/Foxy.png" id="1_rpqav"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kyqiw"]
@@ -39,9 +40,11 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D" unique_id=1723233790]
+script = ExtResource("1_kyqiw")
+move_speed = 100.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=118050134]
 sprite_frames = SubResource("SpriteFrames_ojjrd")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.40550962
+frame_progress = 0.76514125
