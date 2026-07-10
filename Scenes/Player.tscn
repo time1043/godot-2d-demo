@@ -87,7 +87,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ojjrd"]
-radius = 14.0
+radius = 9.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1723233790 node_paths=PackedStringArray("animator")]
 script = ExtResource("1_kyqiw")
@@ -98,7 +98,7 @@ animator = NodePath("AnimatedSprite2D")
 sprite_frames = SubResource("SpriteFrames_ojjrd")
 animation = &"run"
 autoplay = "idle"
-frame_progress = 0.5305187
+frame_progress = 0.5508998
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2129578889]
 position = Vector2(0, 5)

@@ -23,3 +23,7 @@ func _physics_process(delta: float) -> void:
 	
 	# Move according to velocity
 	move_and_slide()
+
+
+func game_over():
+	get_tree().reload_current_scene()

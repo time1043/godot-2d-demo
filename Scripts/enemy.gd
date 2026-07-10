@@ -11,3 +11,9 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	position += Vector2(slime_speed, 0) * delta
+
+
+func _on_body_entered(body: Node2D) -> void:
+	# Check if the collision is a player
+	if body is CharacterBody2D:
+		body.game_over()
