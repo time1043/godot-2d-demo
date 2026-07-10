@@ -15,5 +15,5 @@ func _physics_process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	# Check if the collision is a player
-	if body is CharacterBody2D:
+	if body is Player:
 		body.game_over()
